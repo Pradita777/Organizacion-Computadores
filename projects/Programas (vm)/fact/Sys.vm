@@ -1,0 +1,6 @@
+function Sys.init 0
+    push constant 10   //calcular Fib(5)
+    call Main.fibonacci 1
+
+label Fin 
+goto Fin

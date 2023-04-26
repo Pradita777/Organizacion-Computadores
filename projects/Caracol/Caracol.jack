@@ -1,0 +1,29 @@
+class Caracol{
+    field int x;
+    field int y;
+    field int size;
+    constructor Caracol new (int Ax, int Ay, int Asize){
+        let x = Ax;
+        let y = Ay;
+        let size = Asize;
+        do draw();
+        return this;
+    }
+
+    function void draw() {
+        var int memAddress; 
+        let memAddress = 16384+(x+(y*32));
+        // column 0
+        do Memory.poke(memAddress, 1280);
+        do Memory.poke(memAddress +32, 1792);
+        do Memory.poke(memAddress +64, 2176);
+        do Memory.poke(memAddress +96, 2716);
+        do Memory.poke(memAddress +128, 1186);
+        do Memory.poke(memAddress +160, 585);
+        do Memory.poke(memAddress +192, 597);
+        do Memory.poke(memAddress +224, 589);
+        do Memory.poke(memAddress +256, 546);
+        do Memory.poke(memAddress +288, 511);
+        return;
+    }
+}

@@ -1,0 +1,14 @@
+class Main {
+    function int main(int sum) {
+        var int sum,par,impar;
+    let par = 1;
+	let impar = 0;
+	while (sum > 0) {
+        let sum = sum -2;
+	    if (sum = 0){
+            return par;
+        }
+	}
+	return impar;
+    }
+}

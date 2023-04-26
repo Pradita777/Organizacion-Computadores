@@ -1,0 +1,29 @@
+function Main.factorial 2
+    push argument 0 //valor n
+    pop local 0 
+    
+
+function mult 2
+    push argument 0
+    pop local 0        //lo colocamos en la local 0 (multiplicando)
+    push argument 1
+    pop local 1       //Lo colocamos en local 1 (multiplicador)
+    push local 0
+    pop local 2     //acumulador
+label ciclo
+    push local 0
+    push local 2
+    add
+    pop local 2
+    push local 1
+    push constant 1
+    sub 
+    pop local 1
+    push local 1
+    eq
+    if-goto endMult
+    goto ciclo 
+label endMult
+    push local 2
+    pop temlp 0
+    return 1

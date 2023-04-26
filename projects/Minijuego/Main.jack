@@ -1,0 +1,7 @@
+class Main{
+    function void main () {
+        var Avatar item;
+        let item = Avatar.new(3,15,10);
+        return;
+    }
+}

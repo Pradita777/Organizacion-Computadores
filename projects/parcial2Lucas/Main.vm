@@ -1,0 +1,56 @@
+function Main.lucas 0
+    push argument 0
+    push constant 0
+    eq                // x == 0
+    if-goto IF_TRUE_1 // Saltar si x == 0
+    
+    push argument 0
+    push constant 1
+    eq                // x == 1
+    if-goto IF_TRUE_2 // Saltar si x == 1
+
+    // Calcular lucas(x-1) y lucas(x-2)
+    push argument 0
+    push constant 1
+    sub
+    call Main.lucas 1
+    push argument 0
+    push constant 2
+    sub
+    call Main.lucas 1
+    add
+    return
+
+label IF_TRUE_1
+    push constant 2
+    return
+
+label IF_TRUE_2
+    push constant 1
+    return
+
+// label IF_FALSE          //fib(n-2) + fib(n-1)
+//     //fib(n-2)
+//     push argument 0
+//     push constant 2
+//     sub
+//     call Main.fibonacci 1 //Fib(n-2)
+
+//     //fib(n-1)
+//     push argument 0 
+//     push constant 1 
+//     sub 
+//     call Main.fibonacci 1 //Número de pops que se van a hacer
+
+//     //fib(n-2) + fib(n-1)
+//     add
+//     return
+    
+
+// funcion lucas:
+//   if x = 0
+//     return 2
+//   if x = 1
+//     return 1
+  
+//   return lucas(x-1)+lucas(x-2)  

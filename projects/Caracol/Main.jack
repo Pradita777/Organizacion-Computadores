@@ -1,0 +1,30 @@
+class Main {
+    function void main() {
+        var Avatar player;
+        //var Avatar player2;
+
+        var boolean salir;
+        var char key;
+
+        let player = Avatar.new(3, 15, 30);
+        //let player2 = Avatar.new(13,25,30);
+
+        //leer teclado
+        let salir = false;
+        while(~salir){
+            while(key=0){
+                let key = Keyboard.keyPressed();
+            }
+            if (key = 131){do player.moveUp();}//flecha arriba
+            if (key = 133){do player.moveDown();}//flecha abajo
+            if (key = 132){do player.moveRight();}//flecha der
+            if (key = 130){do player.moveLeft();}//flecha izq
+            if (key = 81){ let salir=true;} //tecla Q
+
+            while(~(key=0)){
+                let key = Keyboard.keyPressed();
+            }
+        }
+        return;
+    }
+}
